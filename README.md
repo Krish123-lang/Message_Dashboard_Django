@@ -4,9 +4,15 @@ It serves as a centralized platform for managing and interacting with messages.
 
 # What this project does?
 * The frontend of the application provides a user-friendly messaging interface. Users can compose and send messages.
+
 * The messages are categorized as read or pending, allowing users to easily identify new messages. 
 * The dashboard prominently displays key metrics, such as the total number of messages and the number of messages sent today, giving users an overview of their messaging activity.
 * To enhance usability, a global search bar is implemented, enabling users to search for specific messages based on different criteria such as sender name, keywords, or message content. This search functionality allows users to quickly find relevant messages within their inbox.
+* The dashboard also includes a table that lists all message senders.
+* Each row in the table provides options to delete and mark as read the messages.
+* This table is paginated to accommodate a large number of senders and ensure efficient navigation.
+* Additionally, the project includes an admin dashboard that provides administrative functionalities. The admin dashboard is accessible to authorized personnel and allows them to manage system settings, user permissions, and perform administrative tasks specific to the messaging functionality.
+* Finally, the project incorporates a logout functionality, ensuring that users can securely terminate their sessions and protect their data.
 
 ## Installation
 
