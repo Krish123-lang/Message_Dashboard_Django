@@ -72,6 +72,8 @@ python3 manage.py createsuperuser
 6. Copy the url(127.0.0.1:8000) and open it into your browser.
 ![11](https://github.com/Krish123-lang/Message_Dashboard_Django/assets/56486342/92c30b30-a7df-44a5-8c2c-0ba3b86e7710)
 
+https://github.com/Krish123-lang/Message_Dashboard_Django/assets/56486342/3e9fd029-6596-425e-8016-e69304837014
 
+The Video quality has been reduced, because GitHub does'nt allow to upload video size more than 10 Mb.
 
 THANK YOU 🙏
