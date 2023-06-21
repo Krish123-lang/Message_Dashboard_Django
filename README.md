@@ -23,8 +23,21 @@ It serves as a centralized platform for managing and interacting with messages.
 * To enhance usability, a global search bar is implemented, enabling users to search for specific messages based on different criteria such as sender name, keywords, or message content. This search functionality allows users to quickly find relevant messages within their inbox.
 ![5](https://github.com/Krish123-lang/Message_Dashboard_Django/assets/56486342/23c313d1-de4e-4b80-82c5-64bfdb89f35c)
 
+* You can read messages by clicking on MAIL icon.
+![5](https://github.com/Krish123-lang/Message_Dashboard_Django/assets/56486342/f2aa3d39-ea0e-48a5-b5bd-0e16084c482c)
+
+* User can Mark as read the messages.
+![7](https://github.com/Krish123-lang/Message_Dashboard_Django/assets/56486342/e7bbe4d5-95d9-4617-8ebd-afc8f7dca4e8)
+
+* User can also delete the messages.
+![8](https://github.com/Krish123-lang/Message_Dashboard_Django/assets/56486342/22cfb41a-a94f-47e9-bf8c-f6192f3eed9b)
+
+  
 * Additionally, the project includes an admin dashboard that provides administrative functionalities. The admin dashboard is accessible to authorized personnel and allows them to manage system settings, user permissions, and perform administrative tasks specific to the messaging functionality.
+![9](https://github.com/Krish123-lang/Message_Dashboard_Django/assets/56486342/b2b2e032-115d-42d6-84b0-d6926305e377)
+
 * Finally, the project incorporates a logout functionality, ensuring that users can securely terminate their sessions and protect their data.
+![10](https://github.com/Krish123-lang/Message_Dashboard_Django/assets/56486342/c91cb2b0-1263-49cf-b3f6-645e207fedc0)
 
 ## Installation
 
@@ -43,19 +56,22 @@ ii) env\Scripts\activate
  ```python
  pip install -r requirements.txt
 ```
-3. To get the API Key you need to create an account on [WeatherAPI](https://www.weatherapi.com/). 
-4. Then, copy your API key and paste it in `.env` file replacing <Your_Weather_API_Key> with your API key.
-5. Then use
+3. Then use
 
 ```python
- python manage.py makemigration
- python manage.py migrate
- python manage.py runserver
+ python3 manage.py makemigration
+ python3 manage.py migrate
  ```
-
+4. Create superuser using
+```
+python3 manage.py createsuperuser
+```
+5. Enter your details.
+6. Then run ``` python3 manage.py runserver ```
+  
 6. Copy the url(127.0.0.1:8000) and open it into your browser.
-7. You must see this screen
-![weather_app_django (2)](https://github.com/Krish123-lang/Weather_App_GUI_Django/assets/56486342/6c48dd54-7732-400d-b314-efb5cd337b4f)
+![11](https://github.com/Krish123-lang/Message_Dashboard_Django/assets/56486342/92c30b30-a7df-44a5-8c2c-0ba3b86e7710)
+
 
 
 THANK YOU 🙏
