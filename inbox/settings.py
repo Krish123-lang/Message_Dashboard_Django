@@ -80,9 +80,9 @@ WSGI_APPLICATION = "inbox.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'message_dashboard',
+        'NAME': 'YOUR_DATABASE_NAME',
         'USER': 'postgres',
-        'PASSWORD': 'admin',
+        'PASSWORD': '<YOUR_DATABASE_PASSWORD>',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -266,6 +266,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'mandalkrishna739@gmail.com' # <YOUR EMAIL ADDRESS>
-EMAIL_HOST_PASSWORD = 'sfisojrqfrvukmag'
+EMAIL_HOST_USER = '<YOUR EMAIL ADDRESS>' 
+EMAIL_HOST_PASSWORD = '<YOUR APP PASSWORD PROVIDED BY GOOGLE>'
 EMAIL_USE_TLS = True
