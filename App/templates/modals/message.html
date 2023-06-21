@@ -1,0 +1,71 @@
+{% extends 'modals/baseModals.html' %}
+
+ {% comment %} Modal Id  {% endcomment %}
+ {% block modal-id %}id="messageModal"{% endblock modal-id %}
+
+ {% block modal-width %}modal-xl{% endblock modal-width %}
+ 
+ {% comment %} Modal title  {% endcomment %}
+ {% block modal-title %}
+ <i class="fas fa-envelope"></i>&nbsp;&nbsp; Message
+ {% endblock modal-title %}
+ 
+ {% comment %} Modal body  {% endcomment %}
+ {% block form %}
+ 
+ <form action="/send_message" method="post" autocomplete="off" class="was-validated" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="modal-body">
+        <div class="mb-1">
+            <input type="text" class="form-control" name="name" maxlength="40" placeholder="Name" required>
+        </div>
+
+        <div class="mb-1">
+            <input type="tel" class="form-control phone" name="phone" placeholder="Phone" required>
+        </div>
+
+        <div class="mb-1">
+            <input type="email" class="form-control" name="email" maxlength="40" placeholder="Email" required>
+        </div>
+
+        <div class="mb-1">
+            <input type="text" class="form-control" name="subject" maxlength="25" placeholder="Subject" required>
+        </div>
+
+        <div class="form-group mb-2">
+            <textarea name="message" rows="10" id="message" class="form-control" maxlength="1000" required placeholder="Your Message..."></textarea>
+        </div>
+
+        <!-- Character remaining counter -->
+        <span id="remaining"></span><hr>
+
+        <div class="form-group mb-3">
+            <input type="file" class="form-control" name="file" id='file'>
+        </div>
+
+        <h6 class="text-danger" id="note" style="font-size: 12px;">Note: for more than one file use:
+            <strong class="text-success"> .rar </strong> or <strong class="text-success"> .zip </strong>
+        </h6><hr>
+
+        <div class="d-grid gap-2 mt-3">
+            <button class="btn text-light" type="submit" style="background-color: #2e856e;">Send message &nbsp;&nbsp; 
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- input hidder (all messages arrive as pending) -->
+    <input type="hidden" value="Pending" name="status">
+</form>
+
+
+ {% endblock form %}
+
+
+<!-- block close Denied here  -->
+
+{% block close %}
+    
+{% endblock close %}
+    

@@ -1,0 +1,372 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  max-width: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -50px;
+}
+#footer,
+.push {
+  height: 50px;
+}
+
+#btn-nav {
+  float: right;
+  margin-right: 25px;
+}
+
+.block-position {
+  width: 80%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.pulse {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  position: fixed;
+  right: 30px;
+  bottom: 75px;
+  padding: 5px;
+  animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    box-shadow: 0 0 0 0 rgba(1, 152, 117, 0.7), 0 0 0 0 rgba(1, 152, 117, 0.7);
+  }
+  40% {
+    box-shadow: 0 0 0 30px rgba(255, 109, 74, 0), 0 0 0 0 rgba(1, 152, 117, 0.7);
+  }
+  80% {
+    box-shadow: 0 0 0 50px rgba(255, 109, 74, 0),
+      0 0 0 30px rgba(255, 109, 74, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 109, 74, 0), 0 0 0 30px rgba(255, 109, 74, 0);
+  }
+}
+
+#card-login {
+  width: 450px;
+}
+.login-border {
+  border-radius: 10px;
+}
+#btn-enter {
+  border-radius: 250px;
+}
+
+.form-control:focus {
+  border-color: green;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn:focus,
+.btn-active {
+  outline: none;
+  box-shadow: none;
+}
+
+
+.form-check-input:checked{
+  background-color: #8abaae;
+  border: green !important;
+  box-shadow: 0 0 8px rgba(1, 152, 117, 0.4) !important;
+}
+
+.form-check-input{
+  border: green !important;
+  box-shadow: 0 0 8px rgba(1, 152, 117, 0.4) !important;
+}
+
+
+.btn-modal{
+  width: 70px;
+}
+
+.btn-action{
+  width: 45px;
+}
+
+/* Pagination */
+
+.page-item.active .page-link{
+  columns: #fff;
+  background-color: #6c757d;
+  border: 1px solid #6c757d;
+}
+
+.pagination > li > a{
+  background-color: #fff;
+  color: #6c757d;
+}
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > span > a:focus,
+.pagination > span > a:hover{
+  color: #111;
+  background-color: #d3d3d3;
+  border: 1px solid #6c757d;
+  box-shadow: none;
+}
+
+#note{
+  font-size: 12px;
+}
+
+#msg{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+}
+
+#refresh{
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: #111;
+}
+
+#refresh:hover{
+  color: green;
+}
+
+#input-bg{
+  background-color: #fff;
+}
+
+.text-td{
+  font-size: 14px;
+}
+
+#resp-datetime{
+  display: none;
+}
+#mini-dashboard{
+  display: none;
+}
+
+#btn-back{
+  width: 45px;
+  float: left;
+}
+
+
+.side-label{
+  width: 45px;
+  font-size: 15px;
+}
+
+.note-warning{
+  font-size: 12px;
+}
+
+#btn-30m, #btn-ok-logout{
+  width: 80px;
+}
+
+.note-info{
+  font-size: 13px;
+}
+
+.error{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.error-txt1{
+  font-size: 18px;
+}
+
+.error-txt2{
+  font-size: 20px;
+}
+.error-404{
+  font-size: 120px;
+}
+
+.text-td{
+  font-size: 14px;
+}
+
+/* Responsive for tablets 1199px */
+@media(max-width: 1199px){
+  .table thead{
+    display: none;
+  }
+  .table, .table tbody, .table tr, .table td{
+    display: block;
+    width: 100%;
+  }
+  .table tr{
+    margin-bottom: 15px;
+    border: 1px solid #111;
+    border-radius: 3px;
+  }
+  .table td{
+    text-align: right;
+    padding-left: 35%;
+    position: relative;
+    border: 1px solid transparent;
+  }
+  .table td::before{
+    content: attr(label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+  }
+  .table > thead > tr:first-child{
+    display: none;
+    margin-top: 5px;
+  }
+  #responsive-border{
+    border: 1px solid #a9a9a9;
+  }
+  #top-table{
+    background-color: #111;
+    color: #fff;
+  }
+  body{
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+}
+
+
+/* Responsive for smartphones 575px */
+
+@media(max-width: 575px){
+  .txt-sm{
+    font-size: 12px;
+  }
+  .txt-sm2{
+    font-size: 14px;
+  }
+  .txt-sm3{
+    font-size: 16px;
+  }
+  .txt-sm4{
+    font-size: 18px;
+  }
+  .txt-sm5{
+    font-size: 20px;
+  }
+
+   /* === INBOX SYSTEM === */
+  #desk-datatime{
+    display: none;
+  }
+
+  #dashboard{
+    display: none;
+  }
+  #resp-datetime{
+    display: inline;
+    font-size: 11px;
+  }
+  #mini-dashboard{
+    display: inline;
+  }
+
+  #msg{
+    font-size: 20px;
+  }
+  #refresh{
+    font-size: 12px;
+  }
+
+  #global-search{
+    margin-top: -25px;
+  }
+
+  .btn-action{
+    width: 40px;
+  }
+  .text-td{
+    font-size: 13px;
+  }
+   /* === MESSAGE SECTION === */
+   #btn-back{
+    margin-top: 10px;
+   }
+   .hide-br{
+    display: none;
+   }
+
+   /* === POPUP MODALS === */
+   .btn-modal{
+    width: 60px;
+   }
+   #mark-ask{
+    font-size: 13px;
+   }
+   #stack{
+    font-size: 12px;
+   }
+   #btn-30m, #btn-ok-logout{
+    width: 65px;
+    font-size: 12px;
+   }
+   .note-warning{
+    font-size: 11px;
+   }
+   .note-info{
+    font-size: 12px;
+   }
+
+   /* === HOME SECTION === */
+   .typed-text{
+    font-size: 25px;
+   }
+   .pulse{
+    width: 45px;
+    height: 45px;
+    right: 15px;
+    bottom: 62px;
+   }
+
+   #note{
+    font-size: 10px;
+   }
+
+   /* === ERRORS SYSTEM === */
+
+   .error-body{
+    font-size: 90px;
+   }
+   .error-404{
+    font-size: 90px;
+   }
+   .error-txt1{
+    font-size: 12px;
+   }
+   .error-txt2{
+    font-size: 18px;
+   } 
+}

@@ -1,0 +1,28 @@
+{% extends 'modals/baseModals.html' %}
+
+ {% comment %} Modal Id  {% endcomment %}
+ {% block modal-id %}id="infoModal"{% endblock modal-id %}
+ 
+ {% comment %} Modal title  {% endcomment %}
+ {% block modal-title %}
+ <i class="fas fa-exclamation-triangle"></i>&nbsp;&nbsp; Information !
+ {% endblock modal-title %}
+ 
+ {% comment %} Modal body  {% endcomment %}
+ {% block modal-body %}
+
+ <div class="text-center" style="color: #5ca08a;">
+    <span class="fa-stack fa-3x">
+        <i class="fas fa-cloud fa-stack-2x"></i>
+        <i class="fas fa-user-shield fa-stack-1x fa-inverse"></i>
+    </span>
+ </div>
+
+ <div class="mt-3">
+    <span class="text-success">Your account is now secure !</span><br>
+    <span class="note-info">For your safety, the system has automatically logged out !</span>
+    <br class="mb-2 mt-2">
+ </div>
+
+
+ {% endblock modal-body %}

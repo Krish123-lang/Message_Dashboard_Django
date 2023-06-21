@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Customer
+{% endblock title %}
+
+
+{% block typed %}{% endblock typed %}
+    
+{% block nav-content %}
+<i class="fas fa-user-alt"></i>&nbsp;&nbsp; <span style="font-size: 16px;">{{customer.name}}</span>
+{% endblock nav-content %}
+
+
+{% block sidebar-content %}
+<center>
+    Welcome: <span class="text-success"> {{user.get_username}} </span>
+</center>
+
+<a class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#logoutModal">Logout</a>
+<a href="{% url 'admin:index' %}" target="_blank" class="btn btn-outline-success btn-sm">Admin</a>
+{% endblock sidebar-content %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="card text-center mt-3">
+            <div class="card-header">
+                Received on: {{customer.created_at | date:'m/d/Y'}} at {{customer.created_at | date:'H:i'}}
+            </div>
+
+            <div class="card-body">
+                <form action="{% url 'mark_message' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    <!-- input type hidden  -->
+                    <input type="hidden" name="id" value="{{customer.id}}">
+
+                    <div class="input-group mb-2">
+                        <span class="input-group-text justify-content-center side-label"><i class="fas fa-phone-alt"></i></span>
+                        <input id="input-bg" class="form-control" value="{{customer.phone}}" readonly>
+                    </div>
+
+                    
+                    <div class="input-group mb-2">
+                        <span class="input-group-text justify-content-center side-label"><i class="fas fa-envelope"></i></span>
+                        <input id="input-bg" class="form-control" value="{{customer.email}}" readonly>
+                    </div>
+
+                    
+                    <div class="input-group mb-2">
+                        <span class="input-group-text justify-content-center side-label"><i class="fas fa-user-edit"></i></span>
+                        <input id="input-bg" class="form-control" value="{{customer.subject}}" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea name="" readonly id="input-bg" cols="30" rows="10" class="form-control">{{customer.message}}</textarea>
+                    </div>
+
+                    <div class="input-group mb-3 mt-3">
+                        <a href="/media/{{customer.file}}" class="bg-dark text-light input-group-text justify-content-center side-label" target="_blank" style="text-decoration: none;">
+                            <i class="fas fa-paperclip"></i>
+                        </a>
+
+                        
+                        {% if customer.file == "" %}
+                        <input class="form-control" id="input-bg" value="No Attachment" readonly>
+                        {% else %}
+                        <input class="form-control" id="input-bg" value="{{customer.file}}" readonly>
+                        {% endif %}
+                            
+                    </div>
+
+                    
+                    {% if customer.status == "Pending" %}
+                        <input type="hidden" class="form-control" name="status" value="Read">
+                    {% endif %}
+                        
+                    {% include 'modals/mark.html' %}
+
+                </form>
+                
+                {% if customer.status == "Pending" %}
+                <a class="btn btn-dark" id="btn-back" title="Back" data-bs-toggle="modal" data-bs-target="#markModal">
+                {% else %}
+                <a href="{% url 'inbox' %}" class="btn btn-dark" id="btn-back" title="Back">
+                {% endif %}
+                <i class="fas fa-arrow-left"></i>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+{% comment %} script to prevent back button  {% endcomment %}
+<script>
+    history.pushState(null, null, null);
+    window.addEventListener('popstate', function () {
+        history.pushState(null, null, null);
+    });
+</script>
+{% endblock content %}
+    

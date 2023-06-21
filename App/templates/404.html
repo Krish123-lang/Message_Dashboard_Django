@@ -1,0 +1,35 @@
+{% extends '500.html' %}
+
+
+{% block title %}
+    Error 404
+{% endblock title %}
+
+
+{% block auto-logout %}
+    
+{% endblock auto-logout %}
+    
+
+{% block sidebar-content %}
+    
+    {% if user.is_authenticated %}
+    <a href="{% url 'inbox' %}" class="btn btn-secondary">Back</a>
+    {% else %}
+    <a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
+    {% endif %}
+        
+{% endblock sidebar-content %}
+
+
+{% block error-body %}
+    <span class="text-danger mb-5 error-404">404</span>
+    <h6 class="text-danger mb-3 error-txt1">The page doesnot exists !</h6>
+
+    <span class="text-dark error-txt2">If you are sure this is an system error, please contack our <a href="#" class="text-dark">Technical Support.</a></span>
+{% endblock error-body %}
+
+
+{% block reason %}{% endblock reason %}
+{% block note %}{% endblock note %}
+    

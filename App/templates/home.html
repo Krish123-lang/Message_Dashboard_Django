@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Home
+{% endblock title %}
+    
+{% comment %} Block auto-logout here  {% endcomment %}
+{% block auto-logout %}{% endblock auto-logout %}
+    
+
+{% block content %}
+
+<div class="block-position">
+    <h1 class="text-light typed-text">
+        <span id="element" style="color: #8abaae;"></span>
+    </h1>
+</div>
+
+{% comment %} message {% endcomment %}
+
+<div>
+    <button style="background-color: #5ca08e;" class="btn text-light pulse" data-bs-toggle="modal" data-bs-target="#messageModal">
+        <i class="fas fa-envelope fa-2x"></i>
+    </button>
+</div>
+
+{% endblock content %}
+    

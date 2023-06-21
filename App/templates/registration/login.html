@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+    Login
+{% endblock title %}
+
+
+{% block typed %}{% endblock typed %}
+
+{% comment %} Block auto-logout here  {% endcomment %}
+{% block auto-logout %}{% endblock auto-logout %}
+
+{% block sidebar-content %}
+<a href="{% url 'home' %}" class="btn btn-secondary">Home</a>
+{% endblock sidebar-content %}
+
+
+{% block content %}
+    <div class="container mt-5" id="card-login">
+        <div class="card p-3 login-border">
+            <span class="text-center mt-3 text-pulse"><strong>PLEASE LOGIN</strong></span>
+            <form action="" method="post" autocomplete="off">
+                {% csrf_token %}
+                <div class="input-group mb-2 mt-4">
+                    <input type="text" class="form-control" name="username" placeholder="Username">
+                </div>
+
+                <div class="input-group mb-2 mt-4">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                </div>
+
+                <div class="form-check form-switch">
+                    <input type="checkbox" name="" class="form-check-input" onclick="myFunction()" id="" style="float: right;">
+                </div>
+
+                <div class="d-grid gap-2 mt-3">
+                    <input type="submit" value="Enter" id="btn-enter" class="btn btn-success btn-sm mt-4 mb-3">
+                </div>
+
+            </form>
+        </div>
+    </div>
+{% endblock content %}
+    
