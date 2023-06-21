@@ -50,7 +50,8 @@ i) virtualenv env
 ii) env\Scripts\activate
 
 ```
-
+2. Create a database using `create database <YOUR_DATABASE_NAME>`
+3. Create your App Password from [Google My Account](https://myaccount.google.com/security)
 2. Then install tools using  
 
  ```python
